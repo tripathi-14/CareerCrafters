@@ -1,0 +1,7 @@
+{
+  "name": "Career Crafters",
+  "description": "An AI-powered career platform that extracts resume data, generates a personalized career roadmap, and conducts mock interviews to help users achieve their professional goals.",
+  "requestFramePermissions": [
+    "microphone"
+  ]
+}

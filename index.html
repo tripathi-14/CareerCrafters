@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Career Crafters</title>
+    <style>
+      html {
+        font-size: 17px; /* Increase base font size for better readability */
+      }
+    </style>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: {
+                DEFAULT: 'hsl(245, 90%, 65%)', // Vibrant Violet-Blue
+                dark: 'hsl(245, 90%, 60%)',
+              },
+              background: 'hsl(240, 20%, 98%)', // Very light gray for nested backgrounds
+              surface: 'hsl(0, 0%, 100%)',      // Card background base color (white)
+              text: {
+                primary: 'hsl(240, 10%, 25%)', // Dark Slate
+                secondary: 'hsl(240, 5%, 55%)', // Medium Gray
+              },
+              border: 'hsl(240, 10%, 90%)',     // Light gray for borders
+            },
+            keyframes: {
+              fadeIn: {
+                '0%': { opacity: 0, transform: 'translateY(10px)' },
+                '100%': { opacity: 1, transform: 'translateY(0)' },
+              },
+              scaleIn: {
+                '0%': { opacity: 0, transform: 'scale(0.95)' },
+                '100%': { opacity: 1, transform: 'scale(1)' },
+              },
+              'ripple-out': {
+                'from': { transform: 'scale(0.5)', opacity: 0.6 },
+                'to': { transform: 'scale(2.5)', opacity: 0 },
+              }
+            },
+            animation: {
+              'fade-in': 'fadeIn 0.5s ease-out forwards',
+              'scale-in': 'scaleIn 0.3s ease-out forwards',
+              'ripple-out': 'ripple-out 1.5s ease-out infinite',
+            }
+          }
+        }
+      }
+    </script>
+  <script type="importmap">
+{
+  "imports": {
+    "@google/genai": "https://esm.sh/@google/genai@^1.15.0",
+    "react/": "https://esm.sh/react@^19.1.1/",
+    "react": "https://esm.sh/react@^19.1.1",
+    "react-dom/": "https://esm.sh/react-dom@^19.1.1/",
+    "recharts": "https://esm.sh/recharts@^3.1.2",
+    "lucide-react": "https://esm.sh/lucide-react@^0.541.0",
+    "pdfjs-dist": "https://esm.sh/pdfjs-dist@4.5.136",
+    "mammoth": "https://esm.sh/mammoth@1.8.0"
+  }
+}
+</script>
+<link rel="stylesheet" href="/index.css">
+</head>
+  <body class="bg-gradient-to-br from-violet-50 to-blue-50 text-text-primary">
+    <div id="root"></div>
+    <script type="module" src="/index.tsx"></script>
+  </body>
+</html>
